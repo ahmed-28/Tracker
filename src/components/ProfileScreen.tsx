@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { User, Award, TrendingUp, Activity, Dumbbell, Weight, Calendar, Info, LogOut, Loader2, Trash2 } from 'lucide-react';
+import { User, TrendingUp, Activity, Dumbbell, Weight, Calendar, Info, LogOut, Loader2, Trash2 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { getUserStats, getUserProfile } from '../services/profileService';
 import { getLatestBodyWeight } from '../services/bodyWeightService';

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, Session, AuthError } from '@supabase/supabase-js';
-import { supabase, signIn, signUp, signOut, getCurrentUser } from '../services/supabase';
+import { supabase, signIn, signUp, signOut } from '../services/supabase';
 import { checkIfMigrationNeeded } from '../services/migrationService';
 
 interface AuthContextType {

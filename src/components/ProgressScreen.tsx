@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { BarChart3, TrendingUp, Calendar, Activity, Weight, Target } from 'lucide-react';
-import { LineChart, Line, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import { WorkoutEntry, BodyWeightEntry } from '../types';
-import { getAllWorkouts, getProgressData } from '../services/workoutService';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { WorkoutEntry } from '../types';
+import { getAllWorkouts } from '../services/workoutService';
 import { getUniqueExerciseNames } from '../services/exerciseService';
 import { getBodyWeightProgressData, getBodyWeightStats } from '../services/bodyWeightService';
 import { useRealtimeSync } from '../hooks/useRealtimeSync';
@@ -71,7 +71,6 @@ export default function ProgressScreen() {
       return weightData;
     }
 
-    const now = new Date();
     let daysBack = 0;
     
     if (timeFrame === 'week') {
@@ -99,7 +98,6 @@ export default function ProgressScreen() {
     }
     
     if (timeFrame !== 'all') {
-      const now = new Date();
       let daysBack = 0;
       
       if (timeFrame === 'week') {

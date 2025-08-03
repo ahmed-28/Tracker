@@ -2,8 +2,6 @@ import { supabase, getCurrentUser } from './supabase';
 import { Database } from '../types/database';
 
 type ExerciseRow = Database['public']['Tables']['exercises']['Row'];
-type ExerciseInsert = Database['public']['Tables']['exercises']['Insert'];
-type UserExerciseRow = Database['public']['Tables']['user_exercises']['Row'];
 type UserExerciseInsert = Database['public']['Tables']['user_exercises']['Insert'];
 
 export interface Exercise {
