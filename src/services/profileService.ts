@@ -162,7 +162,7 @@ export const deleteAvatar = async (): Promise<void> => {
   }
 
   // Clear avatar URL from profile
-  await updateUserProfile({ avatarUrl: null });
+  await updateUserProfile({ avatarUrl: undefined });
 };
 
 // Get user statistics and summary data
